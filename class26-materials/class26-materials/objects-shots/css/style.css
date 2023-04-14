@@ -13,9 +13,15 @@
 img{
   display: block;
   margin: 0 auto;
+  height: 200px;
+  width: auto;
 }
 
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+.hidden {
+  display: none;
+}
