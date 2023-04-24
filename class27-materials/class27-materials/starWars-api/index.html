@@ -10,22 +10,64 @@
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;800&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/34facd01e8.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<div id="wrapper">
 			<h1>Star Wars Character Learner</h1>
 			<!-- <input type="text" name="" value=""> -->
-			<button type="button" name="button">Learn about a character</button>
+			<button id="charRandomize" type="button" name="button">Learn about a character</button>
 
 
 			<div class = card>
-
-				<h2>Name</h2>
-				<span>Gender</span>
-				<span>Height</span>
-				<span>Birth Year</span>
-				<!-- <img src="img/pokemon.jpeg" alt=""> -->
-				<span>Homeworld</span>
+				<div id="cardName">
+					<h2 id="charName">Character Name</h2>
+				</div>
+				<div id="charInfo">
+					<div class = 'infocontainer'>
+						<i class="fa-solid fa-venus-mars fa-2xl" style="color: #000000;" aria-hidden="true" title="Sex"></i><span class="sr-only">Character sex</span>
+						<ul>
+							<li id="charSex"></li> <!--Char sex API data entry point-->
+						</ul>
+					</div>
+					<div class = 'infocontainer'>
+						<i class="fa-sharp fa-solid fa-weight-scale fa-2xl" style="color: #000000;"aria-hidden="true" title="Mass"></i><span class="sr-only">Character mass</span>
+						<ul>
+							<li id="charMass"></li><!--Char mass API data entry point-->
+						</ul> 
+					</div>
+					<div class = 'infocontainer'>
+						<i class="fa-solid fa-ruler-vertical fa-2xl" style="color: #000000;" aria-hidden="true" title="Height"></i><span class="sr-only">Character height</span>
+						<ul>
+							<li id="charHeight"></li> <!--Char height API data entry point-->
+							
+						</ul>
+					</div>
+					<div class = 'infocontainer'>
+						<i class="fa-solid fa-cake-candles fa-2xl" style="color: #000000;" aria-hidden="true" title="Birth Year"></i><span class="sr-only">Character birth year</span>
+						<ul>
+							<li id="charBirthYear"></li><!--Char API data entry point-->
+						</ul>
+					</div>
+					<div class = 'infocontainer'>
+						<i class="fa-solid fa-earth-americas fa-2xl" style="color: #000000;" style="color: #0a0a0a;"aria-hidden="true" title="Homeworld"></i><span class="sr-only">Character homeworld</span>
+						<ul>
+							<li id="charHomeworld"></li><!--Char homeworld API data entry point-->
+						</ul> 
+					</div>
+					<div class = 'infocontainer'>
+						<i class="fa-solid fa-film fa-2xl" style="color: #000000;" aria-hidden="true" title="Films"></i><span class="sr-only">Character films</span>
+						<ul  id="charFilms">
+							<!--Char films API data entry point-->
+						</ul>
+					</div>
+					
+				</div>
+				
+				
 			</div>
 
 		</div>
