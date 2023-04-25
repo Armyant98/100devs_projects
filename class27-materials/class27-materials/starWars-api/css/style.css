@@ -85,7 +85,7 @@ h1 {
   
 }
 
-#cardName h2 {
+#charName {
   color: yellow;
   font-size: 70px;
 }
@@ -99,6 +99,8 @@ h1 {
   background: linear-gradient(45deg, rgb(9, 180, 232), rgb(196, 35, 11));
 }
 
+
+
 .card .infocontainer{
   display: flex;
   flex-direction: column;
@@ -107,6 +109,7 @@ h1 {
   padding: 0;
   padding-top: 30px;
   min-height: fit-content;
+  width: 15%;
   
   
 }
@@ -119,7 +122,57 @@ h1 {
 }
 
 
+.infocontainer:last-child{
+  width: 25%;
+  padding-right: 5px;
+}
 
+@media screen and (max-width: 700px){
+
+  #charName {
+    
+    font-size: 40px;
+  }
+  
+
+  #charInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card .infocontainer{
+   height: fit-content;
+  }
+
+  .infocontainer ul {
+    list-style: none;
+    text-align: center;
+    padding: 20px 0 0 0;
+    height: fit-content;
+  }
+
+  .infocontainer:last-child{
+    width: auto;
+    padding-bottom: 50px;
+  }
+
+  #wrapper{
+    position: absolute;
+    background-size: cover;
+    padding-bottom: 50px;
+    height: fit-content;
+  }
+
+}
+
+
+@media screen and (orientation: landscape) {
+  #wrapper{
+    position: absolute;
+    background-size: cover;
+    size: 1000px;
+    padding-bottom: 50px;
+  }
+}
 
 
 /******************************************

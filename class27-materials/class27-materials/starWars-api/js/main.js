@@ -16,13 +16,15 @@ function clearList() {
 
 function getFetch(){
   
-  const choice = Math.ceil(Math.random() * 83)
+  let choice = Math.ceil(Math.random() * 83)
+  console.log(choice)
+  if (choice === 17){
+    choice = Math.ceil(Math.random() * 83)
+  }
   console.log(choice)
   const url = `https://swapi.dev/api/people/${choice}/`
   document.getElementById('charFilms').innerHTML = ''
-  if (choice === 17){
-    getFetch()
-  }
+  
  
   fetch(url)
       .then(res => res.json()) // parse response as JSON
