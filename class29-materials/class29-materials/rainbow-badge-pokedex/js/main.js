@@ -6,7 +6,7 @@ function getFetch(){
   const url = 'https://pokeapi.co/api/v2/pokemon/'+poke1
   let ability 
   let moves = [] // 4 moves
-  
+  document.querySelector('#moves').innerHTML = ''
 
   fetch(url)
       .then(res => res.json()) // parse response as JSON
@@ -15,9 +15,33 @@ function getFetch(){
         document.querySelector('#name').innerText = data.name
         document.querySelector('#height').innerText = `Height: ${data.height * 10}cm` //print height to dom
         document.querySelector('#weight').innerText = `Weight: ${data.weight * 100}g` // print weight to dom
-        ability = data.abilities[Math.floor(Math.random() * data.abilities.length)].ability.name //randomize ability based on index and adapt to length of arr
+
+        //randomize ability based on index and adapt to length of arr
+
+        ability = data.abilities[Math.floor(Math.random() * data.abilities.length)].ability.name 
         document.querySelector('#ability').innerText = `Ability: ${ability}` //print ability to dom
         
+
+        //loop through possible moves and randomly select 4 
+        for (let i=0; i < 4; i++){
+          let move = data.moves[Math.floor(Math.random() * data.moves.length)].move.name
+          if(moves.indexOf(move) == -1){
+            moves.push(move) // push to variable containing selected moves
+          }
+          else{
+            i -= 1
+          }
+        }
+
+        //loop through selected moves and append ul with each of the 4 moves
+        moves.forEach(move =>{
+          let li = document.createElement('li')
+          let moveList = document.querySelector('#moves') 
+          moveList.appendChild(li)
+          li.innerText = move
+        })
+        console.log(moves)
+
         
       })
       .catch(err => {
