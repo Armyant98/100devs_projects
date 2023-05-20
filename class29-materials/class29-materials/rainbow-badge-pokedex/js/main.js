@@ -2,7 +2,7 @@
 document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
-  const poke1 = document.querySelector('#search').value
+  const poke1 = document.querySelector('#search').value.toLowerCase()
   const url = 'https://pokeapi.co/api/v2/pokemon/'+poke1
   let ability 
   let moves = [] // 4 moves
