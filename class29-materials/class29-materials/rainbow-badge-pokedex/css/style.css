@@ -2,10 +2,18 @@
 /* CSS
 /*******************************************/
 
+html {
+  font-size: 12px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
 /* Box Model Hack */
 *{
   box-sizing: border-box;
 }
+
+
 
 /******************************************
 /* LAYOUT
@@ -14,6 +22,12 @@ img{
   display: block;
   margin: 0 auto;
 }
+
+h1 {
+  font-size: 6rem ;
+}
+
+
 
 
 #wrapper {
@@ -29,7 +43,10 @@ img{
   align-items: center;
 }
 
+
+
 #searchContainer {
+  display: block;
   padding: 20px;
 }
 
@@ -55,11 +72,72 @@ img{
 }
 
 .halfdex > img {
-  width: 100px;
-  height: 100px;
+  width: 95%;
+  height: auto;
   margin: auto;
 }
+
+.description {
+  margin-top: 30px;
+  font-size: .75rem;
+}
+
+#moves {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+figure {
+  text-align: center;
+  margin:none;
+}
+
+#name {
+  font-size: 1.5em;
+}
+
+#ability {
+  margin-top: 2.5px;
+  text-align: center;
+}
+
+
+
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+ 
+
+@media screen and (max-width: 736px) {
+  h1{
+    font-size: 3rem;
+  }
+
+  #searchContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  button {
+    width: fit-content;
+  }
+
+  
+  .description {
+    margin-top: 30px;
+    font-size: .75rem;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .description {
+    margin-top: 30px;
+    font-size: .5rem;
+  }
+}

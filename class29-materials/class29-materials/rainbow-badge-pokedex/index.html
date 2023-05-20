@@ -4,12 +4,19 @@
     	<meta charset="utf-8">
     	<meta name="description" content="This is where your description goes">
     	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<title>Title in the tab</title>
 
 		<!-- external CSS link -->
+		
+		
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		
 	</head>
 	<body>
 
@@ -23,17 +30,20 @@
 			
 			<section id="pokedex">
 				<section class="halfdex">
-					<img src="" alt="">
+					<img id='pokemonImg' src="" alt="">
 				</section>
-				<section class="halfdex">
+				<section class="halfdex description">
 					<h2 id="name"></h2>
 					<span id="height"></span>
 					<span id="weight"></span>
 					<span id="ability"></span>
-					<ul id="moves">
+					<figure>
+						<figcaption id="moveset"></figcaption>
+						<ul id="moves">
 						
-					</ul>
-
+						</ul>	
+					</figure>
+					
 
 				</section>
 

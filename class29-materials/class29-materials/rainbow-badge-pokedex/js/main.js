@@ -15,11 +15,11 @@ function getFetch(){
         document.querySelector('#name').innerText = data.name
         document.querySelector('#height').innerText = `Height: ${data.height * 10}cm` //print height to dom
         document.querySelector('#weight').innerText = `Weight: ${data.weight * 100}g` // print weight to dom
-
+        document.querySelector('#moveset').innerText = 'Moveset:'
         //randomize ability based on index and adapt to length of arr
 
         ability = data.abilities[Math.floor(Math.random() * data.abilities.length)].ability.name 
-        document.querySelector('#ability').innerText = `Ability: ${ability}` //print ability to dom
+        document.querySelector('#ability').innerHTML = `Ability: <br> ${ability}` //print ability to dom
         
 
         //loop through possible moves and randomly select 4 
@@ -41,6 +41,11 @@ function getFetch(){
           li.innerText = move
         })
         console.log(moves)
+
+
+        //add img to left side of pokedex 
+
+        document.querySelector('#pokemonImg').src = data.sprites.front_default
 
         
       })
