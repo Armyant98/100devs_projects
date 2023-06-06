@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>My pokedex</title>
+
+		<!-- external CSS link -->
+		
+		
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		
+	</head>
+	<body>
+
+		<div id="wrapper">
+			<h1>Pokedex</h1>
+			<div id="searchContainer">
+				<!-- <label for="pokemonSearch">Search:</label> -->
+				<input id='search' type="text" list="pokemon" name="pokemonSearch" placeholder="Name or ID number" />
+				<datalist id="pokemon">
+					
+				</datalist>
+				<button>Search</button>
+			</div>
+			
+			<section id="pokedex">
+				<section class="halfdex">
+					<img id='pokemonImg' src="" alt="">
+				</section>
+				<section class="halfdex description">
+					<h2 id="name"></h2>
+					<span id="height"></span>
+					<span id="weight"></span>
+					<span id="ability"></span>
+					<figure>
+						<figcaption id="moveset"></figcaption>
+						<ul id="moves">
+						
+						</ul>	
+					</figure>
+					
+
+				</section>
+
+			</section>
+
+
+
+		</div>
+		
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

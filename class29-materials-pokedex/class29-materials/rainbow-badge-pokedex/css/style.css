@@ -1,0 +1,147 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+html {
+  font-size: 12px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img{
+  display: block;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 6rem ;
+}
+
+
+
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#searchContainer {
+  display: block;
+  padding: 20px;
+}
+
+
+#pokedex {
+  display: flex;
+  width: 90%;
+  max-width: 650px;
+  height: 60%;
+  background-image: url(../img/pokedex.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.halfdex {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.halfdex > img {
+  width: 95%;
+  height: auto;
+  margin: auto;
+}
+
+.description {
+  margin-top: 30px;
+  font-size: .75rem;
+}
+
+#moves {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+figure {
+  text-align: center;
+  margin:none;
+}
+
+#name {
+  font-size: 1.5em;
+}
+
+#ability {
+  margin-top: 2.5px;
+  text-align: center;
+}
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+ 
+
+@media screen and (max-width: 736px) {
+  h1{
+    font-size: 3rem;
+  }
+
+  input{
+    font-size: 16px;
+  }
+
+  #searchContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  button {
+    width: fit-content;
+  }
+
+  
+  .description {
+    margin-top: 30px;
+    font-size: .75rem;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .description {
+    margin-top: 30px;
+    font-size: .5rem;
+  }
+}
